@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>react_project_persona_recommendations.md - Markdown Review Export</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <style>
+    body {
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    .paper {
+      background-color: white;
+      width: 900px;
+      min-height: 1200px;
+      padding: 80px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    /* 修正表格樣式 */
+    .prose table { border-collapse: collapse; width: 100%; border: 1px solid #e2e8f0; margin-bottom: 2rem; }
+    .prose th, .prose td { border: 1px solid #e2e8f0; padding: 12px 16px !important; text-align: left; }
+    .prose thead { background-color: #f8fafc; }
+    
+    /* 確保註解在匯出檔中正確顯示 */
+    .absolute { position: absolute; }
+    .pointer-events-none { pointer-events: none; }
+    .pointer-events-auto { pointer-events: auto; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .overflow-hidden { overflow: hidden; }
+    .rounded-sm { border-radius: 0.125rem; }
+    .w-12 { width: 3rem; }
+    .h-12 { height: 3rem; }
+    .-ml-6 { margin-left: -1.5rem; }
+    .-mt-6 { margin-top: -1.5rem; }
+    .rounded-2xl { border-radius: 1rem; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .text-white { color: #fff; }
+    .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+    .border-4 { border-width: 4px; }
+    .border-white { border-color: #fff; }
+    .ring-8 { --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(8px + var(--tw-ring-offset-width)) var(--tw-ring-color); box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); }
+    .bg-indigo-600 { background-color: #4f46e5; }
+    .bg-emerald-500 { background-color: #10b981; }
+    
+    /* 隱藏評論內容，僅保留圖示（或根據需要調整） */
+    .group-hover\:opacity-100 { opacity: 0; }
+    .group:hover .group-hover\:opacity-100 { opacity: 1; }
+    
+    @media print {
+      body { padding: 0; background: white; }
+      .paper { box-shadow: none; border: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="paper">
+    <div class="prose prose-slate prose-lg max-w-none"><h1>針對本專案：前端 React 開發的 claude-octopus persona 使用建議</h1>
+<blockquote>
+<p>專案類型：前端 React 開發<br>
+目標：不是單純選「寫得最好」的 persona，而是選「對 React 前端日常開發最有幫助」的 persona 組合。</p>
+<p>Personas from  <a href="https://github.com/nyldn/claude-octopus/tree/main/agents/personas" target="_blank">https://github.com/nyldn/claude-octopus/tree/main/agents/personas</a></p>
+</blockquote>
+<hr>
+<h2>1. 專案情境假設</h2>
+<p>本專案以 React 前端開發為主，常見工作可能包含：</p>
+<ul>
+<li>UI component 開發</li>
+<li>state management</li>
+<li>hooks / effects / refs 行為調整</li>
+<li>表單、slider、toolbar、editor 類互動</li>
+<li>前後端 API 串接</li>
+<li>權限、登入狀態、token、cookie、CORS</li>
+<li>效能優化，例如 rerender、bundle size、Core Web Vitals</li>
+<li>測試與 regression 防止</li>
+<li>需求拆解、PRD、acceptance criteria</li>
+<li>code review 與 bug investigation</li>
+</ul>
+<p>因此 persona 的選擇不應只看「角色名稱高大上」，而要看它是否能幫你在 React 專案裡更快完成以下事情：</p>
+<ol>
+<li>把需求寫清楚</li>
+<li>把 UI/UX 行為定義清楚</li>
+<li>實作元件與 hooks</li>
+<li>找 bug 根因</li>
+<li>審查 PR</li>
+<li>檢查效能與安全風險</li>
+</ol>
+<hr>
+<h2>2. React 專案推薦 Persona 排名</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th style="text-align: right;">React 專案排名</th><th>Persona</th><th>優先級</th><th>主要用途</th><th>為什麼適合本專案</th></tr></thead><tbody><tr><td style="text-align: right;">1</td><td><code>frontend-developer.md</code></td><td>P0</td><td>React 元件、hooks、狀態管理、前端實作</td><td>這應該是 React 專案的主力 persona。任何元件行為、UI 邏輯、前端資料流都應先交給它</td></tr><tr><td style="text-align: right;">2</td><td><code>code-reviewer.md</code></td><td>P0</td><td>PR review、重構審查、品質檢查</td><td>React 專案很容易出現 useEffect dependency、state race、props 設計、可讀性與維護性問題，code-reviewer 適合做總審查</td></tr><tr><td style="text-align: right;">3</td><td><code>debugger.md</code></td><td>P0</td><td>Bug 根因分析、測試失敗、非預期 UI 行為</td><td>你的專案若常處理 slider、editor toolbar、focus/blur、commit-on-close 這類互動 bug，debugger 很重要</td></tr><tr><td style="text-align: right;">4</td><td><code>performance-engineer.md</code></td><td>P1</td><td>React rerender、profiling、Core Web Vitals、bundle size</td><td>前端效能問題需要專門看，不適合只靠一般 code review</td></tr><tr><td style="text-align: right;">5</td><td><code>ui-ux-designer.md</code></td><td>P1</td><td>UI 流程、設計系統、互動規格</td><td>若你在做 toolbar、editor、slider、圖片編輯等 UI，這個 persona 能幫忙先定義使用者體驗</td></tr><tr><td style="text-align: right;">6</td><td><code>product-writer.md</code></td><td>P1</td><td>PRD、user story、acceptance criteria</td><td>對 AI coding 很有幫助。需求越明確，Claude/AI 寫出的 code 越穩</td></tr><tr><td style="text-align: right;">7</td><td><code>security-auditor.md</code></td><td>P1/P2</td><td>Auth、token、CORS、XSS、依賴安全</td><td>如果前端有登入、權限、上傳、HTML rendering、第三方套件，就要用</td></tr><tr><td style="text-align: right;">8</td><td><code>backend-architect.md</code></td><td>P2</td><td>API contract、前後端資料流、GraphQL/REST 設計</td><td>雖然本專案是前端，但只要你要設計 API 契約或資料模型，它仍然很有用</td></tr><tr><td style="text-align: right;">9</td><td><code>test-automator.md</code></td><td>P2</td><td>測試策略、unit/integration/e2e</td><td>如果專案要補測試或防 regression，應搭配 debugger 和 code-reviewer</td></tr><tr><td style="text-align: right;">10</td><td><code>ai-engineer.md</code></td><td>視功能而定</td><td>AI feature、chatbot、RAG、prompt flow</td><td>只有當 React 專案包含 AI 功能時才需要</td></tr></tbody></table>
+<hr>
+<h2>3. 建議的 Persona 工作流</h2>
+<h3>A. 新功能開發流程</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>階段</th><th>使用 Persona</th><th>產出</th></tr></thead><tbody><tr><td>需求整理</td><td><code>product-writer.md</code></td><td>PRD、user story、acceptance criteria、non-goals</td></tr><tr><td>UI/UX 定義</td><td><code>ui-ux-designer.md</code></td><td>使用流程、元件狀態、互動規則、edge cases</td></tr><tr><td>前端實作</td><td><code>frontend-developer.md</code></td><td>React component、hooks、狀態管理、樣式</td></tr><tr><td>程式審查</td><td><code>code-reviewer.md</code></td><td>可維護性、風險、可讀性、潛在 bug</td></tr><tr><td>效能檢查</td><td><code>performance-engineer.md</code></td><td>rerender、memoization、bundle、Core Web Vitals</td></tr><tr><td>測試補強</td><td><code>test-automator.md</code></td><td>unit / integration / e2e 測試案例</td></tr></tbody></table>
+<p>建議指令風格：</p>
+<pre><code class="language-text">先用 product-writer 幫我把這個功能整理成 user stories 和 acceptance criteria。
+再用 ui-ux-designer 補齊互動狀態與 edge cases。
+最後交給 frontend-developer 實作 React component。
+</code></pre>
+<hr>
+<h3>B. Bug 修復流程</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>階段</th><th>使用 Persona</th><th>產出</th></tr></thead><tbody><tr><td>重現問題</td><td><code>debugger.md</code></td><td>重現條件、可能根因、影響範圍</td></tr><tr><td>修復實作</td><td><code>frontend-developer.md</code></td><td>最小修復 patch</td></tr><tr><td>回歸測試</td><td><code>test-automator.md</code></td><td>防止同 bug 再發生的測試</td></tr><tr><td>審查</td><td><code>code-reviewer.md</code></td><td>是否引入副作用、是否過度修補</td></tr></tbody></table>
+<p>適合你的情境範例：</p>
+<pre><code class="language-text">這個 React slider 在 blur / unmount 時 commit 行為怪怪的。
+請先用 debugger 找根因，不要直接改 code。
+找出原因後，再用 frontend-developer 給一版最小修復。
+最後用 test-automator 補測試情境。
+</code></pre>
+<hr>
+<h3>C. PR Review 流程</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>階段</th><th>使用 Persona</th><th>重點</th></tr></thead><tbody><tr><td>第一輪總審查</td><td><code>code-reviewer.md</code></td><td>邏輯、可讀性、架構、風險</td></tr><tr><td>前端專項審查</td><td><code>frontend-developer.md</code></td><td>hooks、render、component boundary、props</td></tr><tr><td>效能專項審查</td><td><code>performance-engineer.md</code></td><td>unnecessary rerender、memo、bundle</td></tr><tr><td>安全專項審查</td><td><code>security-auditor.md</code></td><td>XSS、auth、dependency、sensitive data</td></tr></tbody></table>
+<p>建議 prompt：</p>
+<pre><code class="language-text">請用 code-reviewer 先做整體 PR review。
+特別注意 React hooks dependency、state synchronization、event listener cleanup、unmount side effects。
+如果發現效能疑慮，再交給 performance-engineer 深挖。
+</code></pre>
+<hr>
+<h2>4. React 前端常見任務對照表</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>任務</th><th>最適合 Persona</th><th>備用 Persona</th><th>備註</th></tr></thead><tbody><tr><td>寫 React component</td><td><code>frontend-developer.md</code></td><td><code>ui-ux-designer.md</code></td><td>若 UI 行為不清楚，先找 UI/UX</td></tr><tr><td>寫 custom hook</td><td><code>frontend-developer.md</code></td><td><code>code-reviewer.md</code></td><td>hook 特別需要注意 dependency 與 cleanup</td></tr><tr><td>修 useEffect bug</td><td><code>debugger.md</code></td><td><code>frontend-developer.md</code></td><td>先找根因，不要直接亂改 dependency array</td></tr><tr><td>修 focus / blur / keyboard event</td><td><code>debugger.md</code></td><td><code>frontend-developer.md</code></td><td>這類 bug 常跟 event order 有關</td></tr><tr><td>優化 rerender</td><td><code>performance-engineer.md</code></td><td><code>frontend-developer.md</code></td><td>需要 profiling，不要只憑感覺加 memo</td></tr><tr><td>優化 bundle size</td><td><code>performance-engineer.md</code></td><td><code>code-reviewer.md</code></td><td>檢查 dependencies、lazy loading、tree shaking</td></tr><tr><td>設計元件 API</td><td><code>frontend-developer.md</code></td><td><code>ui-ux-designer.md</code></td><td>props 命名、controlled/uncontrolled 模式很重要</td></tr><tr><td>設計 editor toolbar</td><td><code>ui-ux-designer.md</code></td><td><code>frontend-developer.md</code></td><td>先定義使用者操作流，再寫 code</td></tr><tr><td>撰寫需求</td><td><code>product-writer.md</code></td><td><code>ui-ux-designer.md</code></td><td>對 AI coding 來說非常重要</td></tr><tr><td>PR review</td><td><code>code-reviewer.md</code></td><td><code>security-auditor.md</code>, <code>performance-engineer.md</code></td><td>code-reviewer 當總入口</td></tr><tr><td>XSS / HTML injection</td><td><code>security-auditor.md</code></td><td><code>code-reviewer.md</code></td><td>React 專案若用 dangerouslySetInnerHTML 必查</td></tr><tr><td>API contract</td><td><code>backend-architect.md</code></td><td><code>frontend-developer.md</code></td><td>前後端資料格式、錯誤處理、pagination</td></tr><tr><td>測試</td><td><code>test-automator.md</code></td><td><code>debugger.md</code></td><td>bug 修完一定要補測試</td></tr></tbody></table>
+<hr>
+<h2>5. 本專案建議保留的核心 Persona 組合</h2>
+<h3>最小組合：日常 React 開發</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Persona</th><th>用途</th></tr></thead><tbody><tr><td><code>frontend-developer.md</code></td><td>主力實作</td></tr><tr><td><code>debugger.md</code></td><td>找根因</td></tr><tr><td><code>code-reviewer.md</code></td><td>審查品質</td></tr><tr><td><code>product-writer.md</code></td><td>需求整理</td></tr><tr><td><code>ui-ux-designer.md</code></td><td>UI/UX 行為定義</td></tr></tbody></table>
+<p>這 5 個足以覆蓋大部分前端日常開發。</p>
+<hr>
+<h3>加強組合：準備上線或大型重構</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Persona</th><th>用途</th></tr></thead><tbody><tr><td><code>performance-engineer.md</code></td><td>效能與 Core Web Vitals</td></tr><tr><td><code>security-auditor.md</code></td><td>XSS、auth、依賴安全</td></tr><tr><td><code>test-automator.md</code></td><td>測試與 regression</td></tr><tr><td><code>backend-architect.md</code></td><td>API contract 與資料流</td></tr></tbody></table>
+<p>這組適合在 release 前、重構前後、或功能變複雜時使用。</p>
+<hr>
+<h2>6. 不同情境的推薦 Prompt</h2>
+<h3>情境 1：React 元件行為很複雜</h3>
+<pre><code class="language-text">請用 ui-ux-designer 先整理這個元件的所有互動狀態、edge cases 和預期行為。
+整理完後，再用 frontend-developer 實作。
+實作後請 code-reviewer 檢查 hooks dependency、event cleanup、controlled/uncontrolled state 是否合理。
+</code></pre>
+<h3>情境 2：已經有 bug，但不知道原因</h3>
+<pre><code class="language-text">請用 debugger 先找根因，不要急著修改。
+請列出：
+1. 重現條件
+2. 最可能的根因
+3. 受影響的 component / hook
+4. 最小修復方式
+5. 應補的 regression test
+</code></pre>
+<h3>情境 3：效能變慢</h3>
+<pre><code class="language-text">請用 performance-engineer 分析這段 React UI 的效能問題。
+請特別檢查：
+1. unnecessary rerender
+2. expensive computation
+3. memo/useMemo/useCallback 是否真的必要
+4. bundle size
+5. Core Web Vitals 可能影響
+請不要只憑感覺加 memo，要說明依據。
+</code></pre>
+<h3>情境 4：PR 上線前審查</h3>
+<pre><code class="language-text">請用 code-reviewer 審查這次 diff。
+請特別注意：
+1. React hooks dependency
+2. event listener cleanup
+3. unmount side effects
+4. accessibility
+5. error handling
+6. 是否需要補 test
+如果發現安全或效能問題，請分別交給 security-auditor 或 performance-engineer 補充。
+</code></pre>
+<h3>情境 5：需求太模糊</h3>
+<pre><code class="language-text">請用 product-writer 把這個功能整理成：
+1. Problem statement
+2. Goals / Non-goals
+3. User stories
+4. Acceptance criteria
+5. Edge cases
+6. Implementation phases
+輸出要適合交給 AI coding assistant 直接執行。
+</code></pre>
+<hr>
+<h2>7. 對本專案的具體建議</h2>
+<p>以你目前常見的 React 開發問題來看，例如 slider commit 行為、toolbar state、圖片編輯 UI、focus / blur / unmount 等，我會建議你這樣用：</p>
+<h3>平常開發</h3>
+<ol>
+<li><code>product-writer.md</code>：先把需求和 acceptance criteria 寫清楚</li>
+<li><code>ui-ux-designer.md</code>：整理 UI 狀態與互動流程</li>
+<li><code>frontend-developer.md</code>：實作 component / hook</li>
+<li><code>debugger.md</code>：遇到怪 bug 時先找根因</li>
+<li><code>code-reviewer.md</code>：最後 review diff</li>
+</ol>
+<h3>複雜 bug</h3>
+<ol>
+<li><code>debugger.md</code></li>
+<li><code>frontend-developer.md</code></li>
+<li><code>test-automator.md</code></li>
+<li><code>code-reviewer.md</code></li>
+</ol>
+<h3>上線前</h3>
+<ol>
+<li><code>code-reviewer.md</code></li>
+<li><code>performance-engineer.md</code></li>
+<li><code>security-auditor.md</code></li>
+<li><code>test-automator.md</code></li>
+</ol>
+<hr>
+<h2>8. 最終建議</h2>
+<p>如果是「前端 React 開發專案」，我不會照通用排名直接使用。</p>
+<p>我會把核心優先順序改成：</p>
+<ol>
+<li><code>frontend-developer.md</code></li>
+<li><code>debugger.md</code></li>
+<li><code>code-reviewer.md</code></li>
+<li><code>ui-ux-designer.md</code></li>
+<li><code>product-writer.md</code></li>
+<li><code>performance-engineer.md</code></li>
+<li><code>test-automator.md</code></li>
+<li><code>security-auditor.md</code></li>
+<li><code>backend-architect.md</code></li>
+<li><code>ai-engineer.md</code>（只有 AI 功能時）</li>
+</ol>
+<p>一句話結論：</p>
+<blockquote>
+<p>對本專案來說，最重要的不是找最多知識的 persona，而是建立一條穩定流程：<br>
+<strong>product-writer 定需求 → ui-ux-designer 定互動 → frontend-developer 實作 → debugger 找根因 → code-reviewer 把關 → performance/security/test 做上線前補強。</strong></p>
+</blockquote></div><div class="absolute inset-0 pointer-events-none overflow-hidden rounded-sm"></div>
+  </div>
+</body>
+</html>
